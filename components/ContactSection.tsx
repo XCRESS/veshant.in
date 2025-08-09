@@ -13,7 +13,7 @@ export default function ContactSection() {
   return (
     <section className="relative py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className={styles.title}>Let's Connect</h2>
+        <h2 className={styles.title}>Let&apos;s Connect</h2>
         <p className={styles.subtitle}>Feel free to reach out for collaborations or just a friendly hello!</p>
         
         <div className={styles.contactGrid}>

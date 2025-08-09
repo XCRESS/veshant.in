@@ -33,12 +33,12 @@ export default function Contact() {
         <div className={styles.content}>
           <div className={styles.textContent}>
             <h3 className={styles.headline}>
-              Let's Build Something
+              Let&apos;s Build Something
               <span className={styles.accent}> Amazing </span>
               Together
             </h3>
             <p className={styles.description}>
-              I'm currently working at Cosmos Financial Group, but I'm always interested in hearing about new opportunities,
+              I&apos;m currently working at Cosmos Financial Group, but I&apos;m always interested in hearing about new opportunities,
               collaborations, or just having a conversation about technology and innovation.
             </p>
             <div className={styles.availability}>

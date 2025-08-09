@@ -46,7 +46,7 @@ export default function Navigation() {
         <div className={styles.container}>
           <a href="#hero" className={styles.logo}>
             <span className={styles.logoText}>VSD</span>
-            <span className={styles.logoAccent}>//</span>
+            <span className={styles.logoAccent}>{'// '}</span>
           </a>
 
           <div className={styles.navLinks}>
