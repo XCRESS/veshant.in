@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://veshant.in
+
+# Sitemaps
+Sitemap: https://veshant.in/sitemap.xml
