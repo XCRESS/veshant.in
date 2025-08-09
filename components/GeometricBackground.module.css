@@ -1,0 +1,148 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Geometric Shapes */
+.shape1, .shape2, .shape3, .shape4, .shape5 {
+  position: absolute;
+  opacity: 0.03;
+}
+
+.shape1 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  top: 10%;
+  left: 5%;
+  transform: rotate(45deg);
+  animation: float1 30s ease-in-out infinite;
+}
+
+.shape2 {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 173px solid #ff0000;
+  top: 50%;
+  right: 10%;
+  animation: float2 25s ease-in-out infinite;
+}
+
+.shape3 {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #000;
+  bottom: 20%;
+  left: 30%;
+  animation: rotate 40s linear infinite;
+}
+
+.shape4 {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  top: 30%;
+  right: 40%;
+  animation: float3 35s ease-in-out infinite;
+}
+
+.shape5 {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ff0000;
+  transform: rotate(30deg);
+  bottom: 10%;
+  right: 20%;
+  animation: rotate 30s linear infinite reverse;
+}
+
+/* Animated Lines */
+.line1, .line2, .line3 {
+  position: absolute;
+  background: #000;
+  opacity: 0.02;
+}
+
+.line1 {
+  width: 2px;
+  height: 100%;
+  left: 20%;
+  animation: slideX 20s ease-in-out infinite;
+}
+
+.line2 {
+  width: 100%;
+  height: 2px;
+  top: 40%;
+  animation: slideY 25s ease-in-out infinite;
+}
+
+.line3 {
+  width: 2px;
+  height: 100%;
+  right: 30%;
+  animation: slideX 30s ease-in-out infinite reverse;
+}
+
+/* Animations */
+@keyframes float1 {
+  0%, 100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(30px, -30px);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-40px, 40px);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(20px, -20px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes slideY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}

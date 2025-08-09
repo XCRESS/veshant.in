@@ -1,0 +1,140 @@
+/* Mobile-First Enhancements */
+
+/* Better Mobile Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Improved Touch Targets */
+  button, 
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better Mobile Spacing */
+  section {
+    scroll-margin-top: 80px;
+  }
+  
+  /* Prevent Horizontal Scroll */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  
+  /* Mobile Card Enhancements */
+  .card-interactive {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .card-interactive:active {
+    transform: scale(0.98);
+  }
+  
+  /* Better Mobile Animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Mobile Loading States */
+  .loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Enhanced Mobile Focus States */
+  :focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 2px;
+  }
+  
+  /* Mobile Performance Optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  /* Smooth Scrolling Sections */
+  .scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .scroll-snap-section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Mobile Portrait Specific */
+@media (max-width: 480px) {
+  /* Even smaller text adjustments */
+  h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+  h3 { font-size: clamp(1.2rem, 6vw, 1.5rem); }
+  
+  /* Tighter spacing */
+  section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Mobile-first grid */
+  .grid-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* iPhone Notch Support */
+@supports (padding: max(0px)) {
+  .safe-area-inset {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mobile-bg: #000;
+    --mobile-fg: #fff;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+  
+  .high-contrast-border {
+    border: 2px solid currentColor;
+  }
+}

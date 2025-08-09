@@ -1,0 +1,260 @@
+/* Desktop-First Enhancements */
+
+/* Large Screen Typography */
+@media (min-width: 1200px) {
+  :root {
+    --desktop-max-width: 1400px;
+    --section-spacing: 8rem;
+  }
+  
+  /* Enhanced Typography Scale */
+  h1 { 
+    font-size: clamp(3rem, 5vw, 5rem); 
+    line-height: 0.9;
+  }
+  h2 { 
+    font-size: clamp(2.5rem, 4vw, 4rem); 
+    line-height: 1;
+  }
+  h3 { 
+    font-size: clamp(2rem, 3vw, 3rem); 
+    line-height: 1.1;
+  }
+  
+  /* Wider Content Areas */
+  .container-wide {
+    max-width: var(--desktop-max-width);
+    margin: 0 auto;
+  }
+  
+  /* Enhanced Hover States */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Parallax Scrolling Effects */
+  .parallax-slow {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  .parallax-medium {
+    transform: translateZ(-2px) scale(3);
+  }
+  
+  .parallax-fast {
+    transform: translateZ(-3px) scale(4);
+  }
+}
+
+/* Ultra-Wide Screens */
+@media (min-width: 1920px) {
+  :root {
+    --desktop-max-width: 1600px;
+    --section-spacing: 10rem;
+  }
+  
+  /* Larger Geometric Elements */
+  .geometric-xl {
+    transform: scale(1.5);
+  }
+  
+  /* Multi-Column Layouts */
+  .grid-desktop-xl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  
+  /* Enhanced White Space */
+  section {
+    padding: var(--section-spacing) 4rem;
+  }
+}
+
+/* Desktop Animations */
+@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+  /* Smooth Reveal Animations */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Stagger Animation */
+  .stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .stagger-item:nth-child(1) { transition-delay: 0s; }
+  .stagger-item:nth-child(2) { transition-delay: 0.1s; }
+  .stagger-item:nth-child(3) { transition-delay: 0.2s; }
+  .stagger-item:nth-child(4) { transition-delay: 0.3s; }
+  .stagger-item:nth-child(5) { transition-delay: 0.4s; }
+}
+
+/* Desktop Mouse Interactions */
+@media (min-width: 1200px) {
+  /* Custom Cursor */
+  .custom-cursor {
+    cursor: none;
+  }
+  
+  .cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #ff0000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cursor-ring {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.15s ease;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cursor-grow .cursor-ring {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(255, 0, 0, 0.5);
+  }
+  
+  /* Magnetic Buttons */
+  .magnetic-button {
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  /* 3D Card Effects */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+  }
+  
+  .card-3d::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 0, 0, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+  }
+  
+  .card-3d:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Desktop Grid Enhancements */
+@media (min-width: 1400px) {
+  /* Masonry-like Layout */
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-auto-flow: dense;
+  }
+  
+  .masonry-item-tall {
+    grid-row: span 2;
+  }
+  
+  .masonry-item-wide {
+    grid-column: span 2;
+  }
+  
+  /* Split Screen Layouts */
+  .split-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+  
+  .split-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+}
+
+/* Desktop Performance */
+@media (min-width: 1200px) {
+  /* GPU Acceleration */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Smooth Transitions */
+  .smooth-transition {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+/* Desktop Accessibility */
+@media (min-width: 1200px) {
+  /* Enhanced Focus States */
+  :focus-visible {
+    outline: 3px solid #ff0000;
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+  
+  /* Skip Links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+}
+
+/* Desktop Dark Mode */
+@media (min-width: 1200px) and (prefers-color-scheme: dark) {
+  /* Dark mode optimizations for desktop */
+  :root {
+    --desktop-bg-dark: #0a0a0a;
+    --desktop-surface-dark: #1a1a1a;
+  }
+}

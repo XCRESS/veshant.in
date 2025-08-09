@@ -1,0 +1,265 @@
+/* Section Title */
+.sectionTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.5));
+  }
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Card Wrapper */
+.cardWrapper {
+  perspective: 1000px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.cardWrapper:hover .card {
+  transform: rotateY(5deg) rotateX(-5deg) translateZ(20px);
+}
+
+/* Card Border Animation */
+.cardBorder {
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    #00ffff,
+    #ff00ff,
+    #ffff00,
+    transparent
+  );
+  background-size: 400% 400%;
+  animation: borderRotate 10s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.cardWrapper:hover .cardBorder {
+  opacity: 1;
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Card Content */
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon */
+.iconWrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 3rem;
+  z-index: 2;
+  position: relative;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.iconGlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.3), transparent);
+  border-radius: 50%;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+/* Card Title & Description */
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills Container */
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #00ffff;
+  animation: skillAppear 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes skillAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardWrapper:hover .skillTag {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Card Glow */
+.cardGlow {
+  position: absolute;
+  inset: -50px;
+  border-radius: 20px;
+  filter: blur(50px);
+  transition: opacity 0.3s ease;
+  z-index: -2;
+}
+
+/* Floating Elements */
+.floatingElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floatingShape1,
+.floatingShape2,
+.floatingShape3 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.floatingShape1 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #00ffff, transparent);
+  top: 10%;
+  left: -100px;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.floatingShape2 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #ff00ff, transparent);
+  bottom: 20%;
+  right: -75px;
+  animation: float2 25s ease-in-out infinite;
+}
+
+.floatingShape3 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffff00, transparent);
+  top: 50%;
+  left: 50%;
+  animation: float3 30s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, -50px) rotate(180deg);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-100px, 50px) rotate(-180deg);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  33% {
+    transform: translate(-30%, -70%) rotate(120deg);
+  }
+  66% {
+    transform: translate(-70%, -30%) rotate(240deg);
+  }
+}
