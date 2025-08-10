@@ -54,7 +54,7 @@ export default function Projects() {
     <section id="projects" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.sectionNumber}>02</span>
+          <span className={styles.sectionNumber}>03</span>
           <h2 className={styles.sectionTitle}>Featured Projects</h2>
           <div className={styles.titleLine}></div>
         </div>
@@ -110,6 +110,7 @@ export default function Projects() {
                   <span key={idx} className={styles.techTag}>{tech}</span>
                 ))}
               </div>
+
             </div>
           ))}
         </div>

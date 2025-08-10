@@ -7,7 +7,7 @@ export default function About() {
     <section id="about" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.sectionNumber}>01</span>
+          <span className={styles.sectionNumber}>02</span>
           <h2 className={styles.sectionTitle}>About Me</h2>
           <div className={styles.titleLine}></div>
         </div>

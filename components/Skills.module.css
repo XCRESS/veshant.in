@@ -565,6 +565,18 @@
     transition: all 0.3s ease;
   }
   
+  .statCard {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 0, 0, 0.05);
+  }
+  
   .statCard:hover .statNumber {
     transform: scale(1.2);
     text-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
@@ -679,11 +691,24 @@
     align-items: center;
     gap: 1rem;
     text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .statCard:hover {
+    transform: translateX(10px);
+    background: rgba(255, 0, 0, 0.05);
   }
   
   .statNumber {
     font-size: 1.8rem;
     margin-bottom: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .statCard:hover .statNumber {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
   }
   
   .header {

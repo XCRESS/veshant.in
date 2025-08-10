@@ -3,6 +3,7 @@
 import styles from './Contact.module.css';
 
 export default function Contact() {
+
   const contactMethods = [
     {
       platform: 'Email',
@@ -25,7 +26,7 @@ export default function Contact() {
     <section id="contact" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.sectionNumber}>04</span>
+          <span className={styles.sectionNumber}>05</span>
           <h2 className={styles.sectionTitle}>Get In Touch</h2>
           <div className={styles.titleLine}></div>
         </div>

@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     siteName: 'Veshant Singh Dahiya Portfolio',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/icon-512x512.png',
+        width: 512,
+        height: 512,
         alt: 'Veshant Singh Dahiya - Full-Stack Developer Portfolio',
       },
     ],
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Veshant Singh Dahiya - Full-Stack Developer',
     description: 'Full-Stack Developer specializing in React, Node.js, Python, and modern web technologies.',
-    images: ['/og-image.png'],
+    images: ['/icon-512x512.png'],
     creator: '@veshantdahiya',
   },
   robots: {
@@ -99,7 +99,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Veshant Singh Dahiya",
     "url": "https://veshant.in",
-    "image": "https://veshant.in/og-image.png",
+    "image": "https://veshant.in/icon-512x512.png",
     "sameAs": [
       "https://github.com/xcress",
       "https://linkedin.com/in/veshant-dahiya"

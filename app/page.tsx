@@ -9,7 +9,7 @@ import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import GeometricBackground from '@/components/GeometricBackground';
 import GridOverlay from '@/components/GridOverlay';
-import { MobileScrollIndicator, MobileCTABar } from '@/components/MobileEnhancements';
+import { MobileScrollIndicator } from '@/components/MobileEnhancements';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -24,7 +24,6 @@ export default function Home() {
     <main className="relative min-h-screen bg-white text-black overflow-x-hidden">
       {/* Mobile Enhancements */}
       <MobileScrollIndicator />
-      <MobileCTABar />
       
       {/* Background Layers */}
       <div className="fixed inset-0 -z-10">

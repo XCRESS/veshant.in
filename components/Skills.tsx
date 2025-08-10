@@ -62,7 +62,7 @@ export default function Skills() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.sectionNumber}>03</span>
+          <span className={styles.sectionNumber}>04</span>
           <h2 className={styles.sectionTitle}>Technical Skills</h2>
           <div className={styles.titleLine}></div>
         </div>

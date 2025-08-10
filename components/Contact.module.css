@@ -312,6 +312,7 @@
   50% { transform: rotate(45deg) translateY(-15px); }
 }
 
+
 /* Desktop Enhancements */
 @media (min-width: 1200px) {
   .section {
@@ -521,7 +522,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 6rem 1rem;
   }
   
   .header {
