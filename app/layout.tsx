@@ -137,6 +137,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="light" />
         <link rel="canonical" href="https://veshant.in" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon-192x192.png" type="image/png" sizes="192x192" />
+        <link rel="icon" href="/icon-512x512.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
